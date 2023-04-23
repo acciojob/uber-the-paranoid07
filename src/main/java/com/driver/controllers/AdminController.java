@@ -18,9 +18,9 @@ public class AdminController {
 	@Autowired
 	AdminService adminService;
 	@PostMapping("/register")
-	public ResponseEntity<Void> registerAdmin(@RequestBody Admin admin){
+	public ResponseEntity<String> registerAdmin(@RequestBody Admin admin){
 
-		return new ResponseEntity<>(HttpStatus.OK);
+		return new ResponseEntity<"Success">(HttpStatus.OK);
 	}
 
 	@PutMapping("/update")
