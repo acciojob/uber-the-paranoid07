@@ -20,6 +20,7 @@ public class AdminController {
 	@PostMapping("/register")
 	public ResponseEntity<Void> registerAdmin(@RequestBody Admin admin){
 
+		adminService.adminRegister(admin);
 		return new ResponseEntity<>(HttpStatus.OK);
 	}
 
@@ -31,6 +32,7 @@ public class AdminController {
 
 	@DeleteMapping("/delete")
 	public void deleteAdmin(@RequestParam Integer adminId){
+		adminService.deleteAdmin(adminId);
 	}
 
 	@GetMapping("/listOfCustomers")
